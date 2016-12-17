@@ -1,7 +1,7 @@
 <resources>
 
-    <string name="app_name">TikTak</string>
-    <string name="widget_name">TikTak</string>
+    <string name="app_name">Star Wars TikTak</string>
+    <string name="widget_name">Star Wars TikTak</string>
 
     <string-array name="quotes">
         <item>It\'s not my fault.</item>
