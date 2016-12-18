@@ -7,6 +7,8 @@
         android:updatePeriodMillis="21600000"
         android:resizeMode="horizontal|vertical"
         android:previewImage="@drawable/preview"
-        android:initialLayout="@layout/widget">
+        android:initialLayout="@layout/widget"
+        android:widgetCategory="home_screen|keyguard"
+        android:initialKeyguardLayout="@layout/widget">
 
 </appwidget-provider>

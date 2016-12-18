@@ -1,4 +1,4 @@
-package com.koltinjo.tiktak;
+package com.koltinjo.tiktaktiktak;
 
 import org.junit.Test;
 

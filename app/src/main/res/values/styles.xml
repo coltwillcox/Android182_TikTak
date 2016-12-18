@@ -3,7 +3,7 @@
     <style name="WidgetFontHour">
 
         <item name="android:textColor">@color/text</item>
-        <item name="android:textSize">56sp</item>
+        <item name="android:textSize">56dp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:typeface">monospace</item>
         <item name="android:shadowColor">@color/text_shadow</item>
@@ -17,7 +17,7 @@
     <style name="WidgetFontDate">
 
         <item name="android:textColor">@color/text</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">16dp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:typeface">monospace</item>
         <item name="android:shadowColor">@color/text_shadow</item>
