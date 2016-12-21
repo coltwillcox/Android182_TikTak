@@ -1,13 +1,11 @@
-package com.koltinjo.tiktaktiktak;
+package com.koltinjo.tiktak;
 
 import android.app.Service;
 import android.appwidget.AppWidgetManager;
 import android.content.ComponentName;
-import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.IBinder;
-import android.util.Log;
 import android.widget.RemoteViews;
 
 import java.text.SimpleDateFormat;
@@ -80,7 +78,6 @@ public class ServiceUpdate extends Service {
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        Log.d("oiram", "onConfigurationChanged");
         updateAll();
     }
 

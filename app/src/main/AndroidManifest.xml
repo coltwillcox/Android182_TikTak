@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.koltinjo.tiktaktiktak">
+          package="com.koltinjo.tiktak">
 
     <application
             android:allowBackup="true"
@@ -8,7 +8,7 @@
 
         <receiver
                 android:configChanges="keyboardHidden|orientation"
-                android:name="com.koltinjo.tiktaktiktak.Widget"
+                android:name="com.koltinjo.tiktak.Widget"
                 android:label="@string/widget_name"
                 android:icon="@drawable/preview">
             <intent-filter>
@@ -19,7 +19,7 @@
                     android:resource="@xml/widget"/>
         </receiver>
 
-        <service android:name="com.koltinjo.tiktaktiktak.ServiceUpdate"/>
+        <service android:name="com.koltinjo.tiktak.ServiceUpdate"/>
 
     </application>
 
