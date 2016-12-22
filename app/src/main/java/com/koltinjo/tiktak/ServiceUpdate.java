@@ -2,8 +2,11 @@ package com.koltinjo.tiktak;
 
 import android.app.Service;
 import android.appwidget.AppWidgetManager;
+import android.content.BroadcastReceiver;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.res.Configuration;
 import android.os.IBinder;
 import android.widget.RemoteViews;
@@ -24,10 +27,20 @@ public class ServiceUpdate extends Service {
 
     private ScheduledExecutorService executorService;
     private Calendar calendar;
+    private BroadcastReceiver broadcastReceiver;
 
     @Override
     public void onCreate() {
         super.onCreate();
+
+        // Register BroadcastReceiver to listen for screen ON events and update with new time.
+        broadcastReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                updateAll();
+            }
+        };
+        registerReceiver(broadcastReceiver, new IntentFilter(Intent.ACTION_SCREEN_ON));
 
         calendar = Calendar.getInstance();
         calendar.setTime(new Date());
@@ -84,6 +97,8 @@ public class ServiceUpdate extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
+        unregisterReceiver(broadcastReceiver);
+        broadcastReceiver = null;
         executorService.shutdownNow();
         executorService = null;
     }

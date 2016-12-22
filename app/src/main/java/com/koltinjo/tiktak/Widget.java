@@ -21,10 +21,8 @@ public class Widget extends AppWidgetProvider {
         // Those few millis can make displays to look laggy (about 1-2 cumulative seconds per 6 hours).
         if (isServiceRunning(context, ServiceUpdate.class)) {
             context.stopService(new Intent(context, ServiceUpdate.class));
-            context.startService(new Intent(context, ServiceUpdate.class));
-        } else {
-            context.startService(new Intent(context, ServiceUpdate.class));
         }
+        context.startService(new Intent(context, ServiceUpdate.class));
     }
 
     @Override
